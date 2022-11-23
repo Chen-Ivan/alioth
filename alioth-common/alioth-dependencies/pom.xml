@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>alioth-common</artifactId>
+        <groupId>com.ivan.alioth</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <artifactId>alioth-dependencies</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <alioth.common.version>${project.version}</alioth.common.version>
+        <lombok.version>1.18.24</lombok.version>
+        <hutool.version>5.7.22</hutool.version>
+        <spring.boot.version>2.5.6</spring.boot.version>
+        <mybatis.plus.version>3.4.3.4</mybatis.plus.version>
+        <mybatis.plus.generator.version>3.5.1</mybatis.plus.generator.version>
+    </properties>
+
+    <!--定义全局的jar包版本-->
+    <dependencyManagement>
+        <dependencies>
+            <!--alioth-util-->
+            <dependency>
+                <groupId>com.ivan.alioth</groupId>
+                <artifactId>alioth-util</artifactId>
+                <version>${alioth.common.version}</version>
+            </dependency>
+
+            <!--alioth-spring-->
+            <dependency>
+                <groupId>com.ivan.alioth</groupId>
+                <artifactId>alioth-spring</artifactId>
+                <version>${alioth.common.version}</version>
+            </dependency>
+
+            <!--alioth-mybatis-->
+            <dependency>
+                <groupId>com.ivan.alioth</groupId>
+                <artifactId>alioth-mybatis</artifactId>
+                <version>${alioth.common.version}</version>
+            </dependency>
+
+            <!--alioth-cache-->
+            <dependency>
+                <groupId>com.ivan.alioth</groupId>
+                <artifactId>alioth-cache</artifactId>
+                <version>${alioth.common.version}</version>
+            </dependency>
+
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!--hutool-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--spring boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--mybatis plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <!--mybatis plus generator-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis.plus.generator.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
