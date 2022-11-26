@@ -38,7 +38,7 @@
             <!--alioth-spring-->
             <dependency>
                 <groupId>com.ivan.alioth</groupId>
-                <artifactId>alioth-spring</artifactId>
+                <artifactId>alioth-core</artifactId>
                 <version>${alioth.common.version}</version>
             </dependency>
 

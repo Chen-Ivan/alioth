@@ -11,7 +11,7 @@
     <modules>
         <module>alioth-util</module>
         <module>alioth-cache</module>
-        <module>alioth-spring</module>
+        <module>alioth-core</module>
         <module>alioth-mybatis</module>
         <module>alioth-dependencies</module>
     </modules>
