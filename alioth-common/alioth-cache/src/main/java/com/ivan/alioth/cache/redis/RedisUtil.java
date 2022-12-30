@@ -2,6 +2,8 @@ package com.ivan.alioth.cache.redis;
 
 import lombok.AllArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 import java.util.Arrays;
 import java.util.List;
